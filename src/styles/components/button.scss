@@ -1,0 +1,10 @@
+.btn-container {
+    margin: 2rem;
+    &__button {
+        background-color: lightblue;
+        padding: 1.5rem;
+        border: 1px solid black;
+        border-radius: 1rem;
+        cursor: pointer;
+    }
+}
