@@ -1,17 +1,23 @@
-import {useState} from 'react';
+import { useState } from "react";
 
-const Checkbox = ({label}) => {
-    const [checked, setChecked] = useState(false);
-  
-    return (
-        <div className="checkbox-container">
-            <label>
-                <input type="checkbox" checked={checked} onChange={()=>setChecked(!checked)} />
-                {label}
-            </label>
-        </div>
-        
-    ); 
-}
+type CheckboxProps = {
+  label: string;
+};
+
+const Checkbox = ({ label }: CheckboxProps) => {
+  const [checked, setChecked] = useState<boolean>(false);
+
+  return (
+    <label className="cb-box">
+      <input
+        className="cb-box__checkbox"
+        type="checkbox"
+        checked={checked}
+        onChange={() => setChecked(!checked)}
+      />
+      {label}
+    </label>
+  );
+};
 
 export default Checkbox;

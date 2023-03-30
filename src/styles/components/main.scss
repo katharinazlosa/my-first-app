@@ -1,11 +1,11 @@
 .main {
-    margin: 2rem;
-    .card {
-        background-color: lightblue; 
-        border: 1px solid black;
-        border-radius: 1rem;
-        font-size: 1.5rem;
-        padding: 3rem;
-        margin: 1rem;
-    }
+  margin: 2rem;
+  .card {
+    background-color: $lightblue;
+    border: 1px solid $black;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    padding: 3rem;
+    margin: 1rem;
+  }
 }

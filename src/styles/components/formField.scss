@@ -1,0 +1,9 @@
+.form-box {
+  display: flex;
+  flex-direction: column;
+  &__label {
+    // padding: 2rem;
+    &__input {
+    }
+  }
+}

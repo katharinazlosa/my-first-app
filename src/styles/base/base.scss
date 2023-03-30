@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: rgb(225, 242, 235);
+  background: radial-gradient(
+    circle,
+    rgba(225, 242, 235, 1) 0%,
+    rgba(236, 236, 236, 1) 100%
+  );
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  &--component {
+    width: 67vw;
+    margin: 1rem;
+  }
+}

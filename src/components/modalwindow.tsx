@@ -1,45 +1,51 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+import logo from "./../assets/logo.png";
+import { useState } from "react";
 
 const ModalWindow = () => {
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+  const [modal, setModal] = useState<boolean>(false);
 
-    const style = {
-        position: 'absolute' as 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 400,
-        bgcolor: 'background.paper',
-        border: '2px solid #000',
-        boxShadow: 24,
-        p: 4,
-    };
-    return (
-        <div className="modal-container">
-            <Button onClick={handleOpen}>Open modal</Button>
-            <Modal
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-                >
-                <Box sx={style}>
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
-                    Text in a modal
-                    </Typography>
-                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                    </Typography>
-                </Box>
-            </Modal>
+  const toggle = () => {
+    setModal(!modal);
+  };
+
+  return (
+    <>
+      <button onClick={toggle} className="btn">
+        Show Modal
+      </button>
+
+      {modal ? (
+        <div>
+          <div className="modal">
+            <div className="modal__header">
+              <img src={logo} alt="logo image" />
+              <button className="btn__close"> ⨉ </button>
+            </div>
+            <div className="modal__section">
+              <h2>
+                Molim vas, ostavite e-mail adresu i kontaktirat ću vas u
+                najkraćem mogućem roku.
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Tristique et egestas quis ipsum. Et sollicitudin ac orci
+                phasellus. Mattis enim ut tellus elementum. Enim nec dui nunc
+                mattis enim ut tellus elementum sagittis. Faucibus pulvinar
+                elementum integer enim neque volutpat ac tincidunt vitae.{" "}
+              </p>
+            </div>
+            <div className="modal__footer">
+              <input type="email" id="email" placeholder="email@js.com" />
+              <button className="btn">Submit</button>
+            </div>
+          </div>
         </div>
-    )
-}
+      ) : (
+        ""
+      )}
+    </>
+  );
+};
 
 export default ModalWindow;
