@@ -1,9 +1,17 @@
 .form-box {
-  display: flex;
-  flex-direction: column;
   &__label {
-    // padding: 2rem;
-    &__input {
+    padding: 1rem 0;
+    display: flex;
+    img {
+      width: 2.4rem;
+    }
+    input {
+      padding: 0.75rem;
+      width: 80%;
+      outline: none;
+      border: none;
+      border-radius: 2rem;
+      
     }
   }
 }

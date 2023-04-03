@@ -11,12 +11,13 @@ const FormField = () => {
   return (
     <div onSubmit={handleSubmit} className="form-box">
       <label className="form-box__label">
-        Name:
+        <img src="https://img.icons8.com/material-outlined/24/null/employee-card.png" />
         <input
           className="form-box__input"
           type="text"
           value={value}
           onChange={(e) => setValue(e.target.value)}
+          placeholder="Name"
         />
       </label>
       {/* <input type="submit" value="Submit" /> */}

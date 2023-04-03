@@ -1,7 +1,7 @@
 const Button = () => {
   return (
     <button className="btn" type="button">
-      Click Me!
+      Submit
     </button>
   );
 };
