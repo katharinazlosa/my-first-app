@@ -6,6 +6,9 @@ import Main from "./components/main";
 import ModalWindow from "./components/modalwindow";
 import Page from "./components/pagination";
 import Tags from "./components/tags";
+import TransfromExe from "./components/tranformExe";
+import Flex from "./components/flex";
+import FlexCard from "./components/flexcard";
 import "./styles/styles.scss";
 
 function App() {
@@ -46,6 +49,21 @@ function App() {
         <div className="container--component">
           <h2>Main</h2>
           <Main />
+          <hr />
+        </div>
+        <div className="container--component">
+          <h2>Transform property exercise</h2>
+          <TransfromExe />
+          <hr />
+        </div>
+        <div className="container--component">
+          <h2>Flex</h2>
+          <Flex />
+          <hr />
+        </div>
+        <div className="container--component">
+          <h2>Flex-cards</h2>
+          <FlexCard />
           <hr />
         </div>
       </div>

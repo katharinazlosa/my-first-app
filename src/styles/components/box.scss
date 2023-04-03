@@ -1,0 +1,38 @@
+.transform-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .box {
+    width: 10rem;
+    height: 10rem;
+    background-color: $lightblue;
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+    transition: all 1s ease;
+    &--translate {
+      &:hover {
+        transform: translate3d(50px, 0, 0) rotate(15deg);
+      }
+    }
+    &--rotate {
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+    &--scale {
+      &:hover {
+        transform: scale(0.7);
+      }
+      &:active {
+        //za miš down
+        transform: scale(0.9);
+      }
+    }
+    &--skew {
+      &:hover {
+        transform: skew(15deg, 15deg);
+      }
+    }
+  }
+}

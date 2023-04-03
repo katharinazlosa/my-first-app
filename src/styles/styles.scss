@@ -3,8 +3,11 @@
 @import "./base/vars.scss";
 
 //components
+@import "./components/box.scss";
 @import "./components/button.scss";
 @import "./components//checkbox.scss";
+@import "./components/flex.scss";
+@import "./components/flexcard.scss";
 @import "./components/formfield.scss";
 @import "./components/hamburger.scss";
 @import "./components/header.scss";

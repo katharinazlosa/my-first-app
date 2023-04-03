@@ -1,0 +1,19 @@
+.cards-container {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: $white;
+
+  &__card {
+    background-color: $lightblue;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid $black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    p {
+      flex-grow: 2;
+    }
+  }
+}

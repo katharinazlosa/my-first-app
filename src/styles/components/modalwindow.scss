@@ -1,12 +1,44 @@
 .modal {
-  background-color: white;
-  color: black;
-  flex-direction: column;
-  border: 1px solid $black;
-  width: 70vw;
-  height: 40vh;
-  z-index: 2;
   position: fixed;
-  padding: 1.5rem;
-  border-radius: 1.5rem;
+  background-color: $white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  width: 40rem;
+  border: none;
+  padding: 2rem;
+  border-radius: 0.5rem;
+
+  &__overlay {
+    background-color: rgba(97, 97, 97, 0.788);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0rem;
+    left: 0;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: right;
+    &__close {
+      cursor: pointer;
+      padding: 0 0.5rem;
+      border-radius: 0.3rem;
+    }
+  }
+
+  &__footer {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+    input {
+      background-color: $lightblue;
+      width: 20rem;
+      border-radius: 2rem;
+      border: none;
+      padding: 1rem;
+    }
+  }
 }
