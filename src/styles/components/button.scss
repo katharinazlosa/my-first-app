@@ -1,3 +1,19 @@
+@keyframes make-bigger {
+  0% {
+    background-color: red;
+    transform: rotate(-90deg);
+  }
+  50% {
+    background-color: yellow;
+    transform: rotate(90deg);
+  }
+  100% {
+    background-color: blue;
+    color: $white;
+    transform: scale(3.7);
+  }
+}
+
 .btn {
   background-color: $lightblue;
   color: $black;
@@ -7,4 +23,21 @@
   border: none;
   border-radius: 1rem;
   cursor: pointer;
+
+  //colors
+  &--red {
+    background-color: $red;
+  }
+  &--green {
+    background-color: $green;
+  }
+  &--yellow {
+    background-color: $orange;
+  }
+
+  &--animate {
+    &:active {
+      animation: make-bigger 1s linear forwards;
+    }
+  }
 }

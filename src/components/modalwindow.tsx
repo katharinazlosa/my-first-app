@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const ModalWindow = () => {
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState<boolean>(false);
 
   const toggleModal = () => {
     setModal(!modal);

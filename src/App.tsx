@@ -9,7 +9,9 @@ import Tags from "./components/tags";
 import TransfromExe from "./components/tranformExe";
 import Flex from "./components/flex";
 import FlexCard from "./components/flexcard";
+import Input from "./components/input";
 import "./styles/styles.scss";
+import React from "react";
 
 function App() {
   return (
@@ -17,8 +19,14 @@ function App() {
       <Header />
       <div className="container">
         <div className="container--component">
+          <h2>Input</h2>
+          <Input rounded label="First name" />
+          <Input label="Last name" validation="lalalal" />
+          <hr />
+        </div>
+        <div className="container--component">
           <h2>Button</h2>
-          <Button />
+          <Button animate={true} value="Stisni me" color="yellow" />
           <hr />
         </div>
         <div className="container--component">
