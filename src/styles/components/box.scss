@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  @media (max-width: $media-m) {
+    flex-direction: column;
+    align-items: center;
+  }
   .box {
     width: 10rem;
     height: 10rem;

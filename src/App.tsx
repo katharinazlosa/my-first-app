@@ -11,13 +11,25 @@ import Flex from "./components/flex";
 import FlexCard from "./components/flexcard";
 import Input from "./components/input";
 import "./styles/styles.scss";
-import React from "react";
+import Card from "./components/card";
+import Grid from "./components/grid";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <div className="container">
+        <div className="container--component">
+          <h2>Card</h2>
+          <Card
+            title="Kartica"
+            text="Kartica text hjkxsdhfkjhfk jshfgkjdhgkjdhf  fdhfdjfkj"
+          />
+        </div>
+        <div className="container--component">
+          <h2>Card grid</h2>
+          <Grid />
+        </div>
         <div className="container--component">
           <h2>Input</h2>
           <Input rounded label="First name" />

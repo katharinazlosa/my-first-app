@@ -1,0 +1,18 @@
+.card-box {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 20rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  &__text {
+    flex-grow: 1;
+  }
+  &__btn {
+    display: flex;
+    .btn {
+      margin: 1rem;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  @media (min-width: $media-m) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: $media-l) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
