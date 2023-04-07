@@ -3,6 +3,7 @@ import Button from "./button";
 type CardProps = {
   title: string;
   text: string;
+  src: string;
 };
 
 const Card = ({ title, text }: CardProps) => {
