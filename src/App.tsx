@@ -13,12 +13,22 @@ import Input from "./components/input";
 import "./styles/styles.scss";
 import Card from "./components/card";
 import Grid from "./components/grid";
+import CardTwo from "./components/card2";
+import Grid2 from "./components/grid2";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <div className="container">
+        <div className="container--component">
+          <h2>Card</h2>
+          <CardTwo title="Gameweek 17" desc="Signed BVB Jersey" value="987" />
+        </div>
+        <div className="container--component">
+          <h2>Card grid</h2>
+          <Grid2 />
+        </div>
         <div className="container--component">
           <h2>Card</h2>
           <Card

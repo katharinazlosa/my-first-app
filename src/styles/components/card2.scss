@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Anuphan&display=swap");
+
+.card-box {
+  display: flex;
+  font-family: "Anuphan", sans-serif;
+  width: 22rem;
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+
+    img {
+      width: 4.4rem;
+      height: 4.4rem;
+    }
+    &__right {
+      margin-left: 1rem;
+      padding: 0.5rem;
+      h3 {
+        margin-top: 0;
+        text-transform: uppercase;
+      }
+      span {
+        color: $grey;
+      }
+    }
+  }
+  &__section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    &__left {
+      span {
+        color: $grey;
+      }
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $blue;
+      color: white;
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+      padding: 0.75rem;
+    }
+  }
+  .line {
+    margin-top: 1rem;
+    height: 1px;
+    border: 0;
+    background: lightgrey;
+  }
+  &__footer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    span {
+      color: $grey;
+    }
+  }
+}
