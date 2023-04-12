@@ -9,10 +9,10 @@ const ToggleButton = () => {
   return (
     <>
       <div>
-        <div className={`switch ${toggle ? "active" : ""}`}>
+        <label className={`switch ${toggle ? "active" : ""}`}>
           <input type="checkbox" onClick={toggleButton}></input>
           <span className="slider round"></span>
-        </div>
+        </label>
       </div>
     </>
   );
