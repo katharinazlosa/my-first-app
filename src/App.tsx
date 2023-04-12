@@ -24,6 +24,7 @@ function App() {
           <Card
             title="Kartica"
             text="Kartica text hjkxsdhfkjhfk jshfgkjdhgkjdhf  fdhfdjfkj"
+            src="https://source.unsplash.com/random/250x250/?nature"
           />
         </div>
         <div className="container--component">
