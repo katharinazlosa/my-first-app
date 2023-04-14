@@ -1,0 +1,52 @@
+@keyframes slide {
+  0% {
+    transform: translateY(-30rem);
+  }
+  100% {
+    transform: translateY(70px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(95deg);
+  }
+}
+
+.block-container {
+  display: flex;
+  flex-direction: row;
+  .block {
+    width: 10rem;
+    height: 10rem;
+    margin-right: 2rem;
+    transform: translateY(-30rem);
+    &.block-rotate {
+      animation: rotate 1s linear forwards;
+    }
+    p {
+      font-size: 3rem;
+      color: $white;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    &--one {
+      background-color: $black;
+      animation: slide 1s linear forwards;
+    }
+    &--two {
+      background-color: $ruby;
+      animation: slide 2s linear forwards;
+    }
+    &--three {
+      background-color: $orange;
+      animation: slide 3s linear forwards;
+    }
+  }
+}

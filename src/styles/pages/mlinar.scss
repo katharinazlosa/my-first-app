@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Anuphan&family=Montserrat&display=swap");
+
+.container--dark {
+  background-color: $black;
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 10rem;
+  h2 {
+    color: $white;
+    line-height: 8rem;
+    font-size: 5rem;
+    .bold {
+      color: $oker;
+    }
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 4rem;
+    .tag {
+      font-size: 1rem;
+      color: $white;
+      background-color: rgb(39, 38, 38);
+      border-radius: 2rem;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
+    }
+  }
+}
