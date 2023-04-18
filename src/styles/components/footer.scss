@@ -1,0 +1,30 @@
+.footer {
+  margin-top: 10rem;
+  background: linear-gradient(
+    226.69deg,
+    rgba(127, 95, 211, 0.9) 4.52%,
+    #5c3ee8 94.64%
+  );
+  width: 100%;
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    padding: 5rem 0 0 5rem;
+    &__column {
+      display: flex;
+      p {
+        padding-right: 4rem;
+      }
+    }
+  }
+  p {
+    img {
+      padding-right: 1rem;
+      cursor: pointer;
+    }
+  }
+  .copyright {
+    padding-top: 4rem;
+  }
+}

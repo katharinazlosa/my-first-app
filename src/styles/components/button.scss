@@ -37,6 +37,10 @@
   &--yellow {
     background-color: $orange;
   }
+  &--purple {
+    background-color: $dark-purple;
+    color: white;
+  }
 
   &--animate {
     &:active {

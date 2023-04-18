@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-type ButtonColorType = "red" | "green" | "yellow";
+type ButtonColorType = "red" | "green" | "yellow" | "purple";
 
 type ButtonProps = {
   animate: boolean;
@@ -22,6 +22,8 @@ const Button = ({
         return "btn--red";
       case "green":
         return "btn--green";
+      case "purple":
+        return "btn--purple";
       default:
         return "btn--yellow";
     }

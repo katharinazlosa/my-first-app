@@ -4,9 +4,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: $white;
   font-family: "Lato";
-  .header {
+  .main {
     text-align: center;
     background-color: $white;
     position: relative;
@@ -17,166 +17,33 @@
     .img-box {
       position: absolute;
       border-radius: 50%;
-      border: 1px dashed purple;
+      border: 1px dashed $dark-purple;
       width: 4.25rem;
       height: 4.25rem;
       padding: 1rem;
-
       img {
         width: 5.5rem;
         height: 5.5rem;
       }
-    }
-    .left {
-      top: 0;
-      left: 0;
-    }
-    .right {
-      bottom: 0;
-      right: 0;
-    }
-    h1 {
-      font-size: 5rem;
-      font-weight: bold;
-      line-height: 6.25rem;
-    }
-    p {
-      font-size: 1.5rem;
-      line-height: 2.25rem;
-      color: grey;
-    }
-  }
-  .calendar {
-    margin-top: 5rem;
-    img {
-      padding: 2rem;
-      width: 68rem;
-      height: 39rem;
-    }
-  }
-  .section {
-    text-align: center;
-    margin-bottom: 7.5rem;
-    h1 {
-      font-size: 3.5rem;
-    }
-    p {
-      color: grey;
-      font-size: 1.5rem;
-      line-height: 2.25rem;
-    }
-  }
-  .grid3 {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    .card-teorem {
-      width: 21rem;
-      height: 22rem;
-      text-align: center;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-      border-radius: 24px;
-      padding: 2.5rem;
-      margin: 1rem;
-      p {
-        color: grey;
+      &--left {
+        top: 0;
+        left: 0;
+      }
+      &--right {
+        bottom: 0;
+        right: 0;
       }
     }
-  }
-  .stretch-card {
-    color: $white;
-    background: linear-gradient(
-      226.69deg,
-      rgba(127, 95, 211, 0.9) 4.52%,
-      #5c3ee8 94.64%
-    );
-    border-radius: 24px;
-    display: flex;
-    margin-top: 8rem;
-    font-size: 1.5rem;
-    width: 68rem;
-    height: 20rem;
-    span {
-      font-size: 1rem;
-      color: grey;
-    }
-    img {
-      width: 10rem;
-      height: 10rem;
-    }
-    &--left {
-      padding: 5.5rem;
-    }
-    &--right {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
-    }
-  }
-  .how-to-box {
-    padding-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-
-    h1 {
-      font-size: 3.5rem;
-      text-align: center;
-    }
-    .line {
-      border-left: 1px dashed purple;
-      height: 10rem;
-      position: absolute;
-      left: 6rem;
-      top: 20rem;
-      z-index: -1;
-    }
-
-    ol {
-      list-style: none;
-      counter-reset: num;
-
-      li {
-        counter-increment: num;
-        padding: 2rem;
+    .text-box {
+      &__title {
+        font-size: 5rem;
+        font-weight: bold;
+        line-height: 6.25rem;
+      }
+      &__content {
         font-size: 1.5rem;
-
-        &::before {
-          content: counter(num) "";
-          background-color: #f5f5f5;
-          color: purple;
-          font-weight: bold;
-          padding: 0.8rem 1.3rem;
-          border-radius: 50%;
-          border-left: 1px dashed purple;
-          height: 15rem;
-        }
-      }
-    }
-  }
-  .question-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    h1 {
-      font-size: 3.5rem;
-    }
-    &__dropdown {
-      justify-content: space-between;
-      &--btn {
-        color: grey;
-        padding: 1.5rem;
-        border: 1px solid grey;
-        background-color: $white;
-        font-size: 1rem;
-        width: 35vw;
-      }
-      &--content {
-        // display: none;
+        line-height: 2.25rem;
+        color: $grey;
       }
     }
   }

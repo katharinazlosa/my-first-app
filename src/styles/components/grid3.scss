@@ -1,0 +1,16 @@
+.grid3 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  .card-teorem {
+    width: 21rem;
+    height: 22rem;
+    text-align: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 24px;
+    padding: 2.5rem;
+    margin: 1rem;
+    p {
+      color: $grey;
+    }
+  }
+}

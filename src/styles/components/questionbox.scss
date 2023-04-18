@@ -1,0 +1,24 @@
+.question-box {
+  h1 {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+  &__dropdown {
+    &--btn {
+      color: $grey;
+      padding: 1.5rem;
+      border: 1px solid $lightgray;
+      background-color: $white;
+      font-size: 1rem;
+      width: 35vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &--content {
+      // display: none;
+      width: 35vw;
+    }
+  }
+}

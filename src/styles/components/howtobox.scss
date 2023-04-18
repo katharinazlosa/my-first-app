@@ -1,0 +1,43 @@
+.how-to-box {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+
+  h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  &__line {
+    border-left: 1px dashed $dark-purple;
+    height: 10rem;
+    position: absolute;
+    left: 6rem;
+    top: 20rem;
+    z-index: -1;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: num;
+
+    li {
+      counter-increment: num;
+      padding: 2rem;
+      font-size: 1.5rem;
+
+      &::before {
+        content: counter(num) "";
+        background-color: $header-background;
+        color: $dark-purple;
+        font-weight: bold;
+        padding: 0.8rem 1.3rem;
+        border-radius: 50%;
+        border-left: 1px dashed $dark-purple;
+        height: 15rem;
+      }
+    }
+  }
+}
