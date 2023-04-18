@@ -22,10 +22,11 @@ const Header = () => {
             <a className="header__nav__item" href="/mlinar">
               Mlinar
             </a>
+            <a className="header__nav__item" href="/teorem">
+              Teorem
+            </a>
           </nav>
-          <div>KZ</div>
         </div>
-        <Hamburger />
       </div>
     </header>
   );

@@ -3,12 +3,9 @@
 .container--dark {
   background-color: $black;
   font-family: "Montserrat";
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  padding: 10rem;
-  h2 {
-    color: $white;
+  color: $white;
+  padding: 7rem 23rem;
+  .title {
     line-height: 8rem;
     font-size: 5rem;
     .bold {
@@ -19,14 +16,76 @@
     display: flex;
     flex-wrap: wrap;
     padding-top: 4rem;
+    width: 60vw;
     .tag {
       font-size: 1rem;
+      line-height: 2rem;
       color: $white;
       background-color: rgb(39, 38, 38);
       border-radius: 2rem;
       border: none;
       padding: 0.5rem 1rem;
-      margin: 0.5rem;
+      margin: 0.7rem;
+    }
+  }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    &--box {
+      font-size: 16px;
+      color: grey;
+      padding-right: 2rem;
+      &:hover {
+        opacity: 0.33;
+      }
+      h4 {
+        text-transform: uppercase;
+        color: $white;
+      }
+    }
+  }
+  hr {
+    &.line {
+      margin: 5.5rem -23rem;
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    &__column {
+      &__title {
+        color: grey;
+        text-transform: uppercase;
+      }
+      &__tags {
+        text-align: right;
+        a {
+          text-decoration: none;
+          color: white;
+          padding: 1rem;
+        }
+      }
+      &__ext {
+        text-align: right;
+        padding-top: 1rem;
+      }
+    }
+  }
+  .credits {
+    display: flex;
+    justify-content: space-between;
+    &__left {
+      img {
+        padding-right: 1.5rem;
+      }
+    }
+    &__right {
+      a {
+        text-decoration: none;
+        color: white;
+        padding: 1rem;
+      }
     }
   }
 }
