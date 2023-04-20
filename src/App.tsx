@@ -6,6 +6,7 @@ import Ispit from "./pages/ispit";
 import Mlinar from "./pages/mlinar";
 import "./styles/styles.scss";
 import Teorem from "./pages/teorem";
+import Fave from "./pages/fave";
 
 function App() {
   const router = createBrowserRouter([
@@ -29,10 +30,10 @@ function App() {
       path: "/teorem",
       element: <Teorem />,
     },
-    // {
-    //   path: "/mlinar",
-    //   element: <Mlinar />,
-    // },
+    {
+      path: "/fave",
+      element: <Fave />,
+    },
   ]);
 
   return (
