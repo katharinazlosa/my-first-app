@@ -1,0 +1,9 @@
+.table {
+  background-color: white;
+  .rows {
+    background-color: $lightblue;
+    td {
+      padding: 2rem;
+    }
+  }
+}
