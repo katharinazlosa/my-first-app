@@ -1,7 +1,10 @@
-.container--dark {
+.container-dark {
   display: flex;
   flex-direction: row;
-  margin-left: -10rem;
+  color: white;
+  background-color: rgb(30, 29, 29);
+  padding: 5rem 15rem;
+
   .section-columns {
     display: flex;
     flex-direction: column;
@@ -121,8 +124,12 @@
         }
       }
       .bigger {
-        height: 18rem;
+        height: 16rem;
       }
+    }
+    .comercial-column {
+      display: flex;
+      flex-direction: column;
     }
   }
 }

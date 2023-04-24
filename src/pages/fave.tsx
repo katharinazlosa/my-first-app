@@ -10,7 +10,7 @@ import nikephoto2 from "./../assets/nikephoto2.png";
 const Fave = () => {
   return (
     <>
-      <div className="container--dark">
+      <div className="container-dark">
         <div className="section-columns">
           <div className="link-column">
             <div>
