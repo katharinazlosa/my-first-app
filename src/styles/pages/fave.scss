@@ -1,0 +1,128 @@
+.container--dark {
+  display: flex;
+  flex-direction: row;
+  margin-left: -10rem;
+  .section-columns {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5.5rem;
+    .link-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .player-box {
+        display: flex;
+        img {
+          border-radius: 50%;
+          border: 3px dashed #53c061;
+        }
+        .player-info {
+          padding: 0.2rem 0.8rem;
+          h4 {
+            margin: 0;
+            padding-bottom: 0.25rem;
+            font-size: 0.9rem;
+          }
+          a {
+            text-decoration: none;
+            color: #0074ff;
+            font-size: 0.8rem;
+            cursor: pointer;
+          }
+        }
+      }
+      .player-stats {
+        display: flex;
+        flex-direction: column;
+        &__link {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 2rem;
+          .arrow-right {
+            height: 0.9rem;
+            padding-top: 0.2rem;
+          }
+          a {
+            color: darkgrey;
+            text-decoration: none;
+            font-size: 0.9rem;
+            &:hover {
+              color: white;
+            }
+
+            img {
+              filter: opacity(0.4) drop-shadow(0 0 0 rgb(37, 35, 35));
+              padding-right: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+
+    .prize-info {
+      padding: 0.7rem;
+      width: 40rem;
+      h3 {
+        font-size: 1.3rem;
+      }
+      p {
+        padding-top: 1rem;
+        font-size: 0.8rem;
+      }
+    }
+    .prize-columns {
+      display: flex;
+      padding: 0.7rem;
+      .column {
+        background-color: #1b2026;
+        border-radius: 0.5rem;
+        width: 18rem;
+        height: 13rem;
+        margin-right: 1rem;
+
+        &__text {
+          padding: 1rem 1.5rem;
+          h3 {
+            font-size: 1.3rem;
+          }
+          span {
+            text-transform: uppercase;
+            font-size: 0.7rem;
+          }
+          p {
+            font-size: 0.7rem;
+          }
+        }
+        &__line {
+          border: 1px solid grey;
+          opacity: 0.1;
+        }
+        &__button {
+          font-size: 0.8rem;
+          display: flex;
+          justify-content: right;
+          align-items: center;
+          padding: 1rem;
+          a {
+            text-decoration: none;
+            color: #0074ff;
+
+            img {
+              filter: opacity(0.4) drop-shadow(0 0 0 blue);
+              padding-left: 1rem;
+              height: 0.5rem;
+            }
+          }
+          .redeemed {
+            text-decoration: none;
+            color: grey;
+            padding: 1rem;
+          }
+        }
+      }
+      .bigger {
+        height: 18rem;
+      }
+    }
+  }
+}
