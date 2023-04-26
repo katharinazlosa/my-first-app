@@ -73,7 +73,7 @@ const Petlje = () => {
     // for (let i = 0; i < str1.length; i++) {
     //   const newArr = str1.split("");
     //   newArr.splice()
-    //   const index = newArr.indexOf("a", "c", "i", "t");
+    //   const index = newArr.indexOf("a");
 
     //   if (index !== -1) {
     //     newArr[index] = "z";
