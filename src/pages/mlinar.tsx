@@ -110,32 +110,32 @@ const Mlinar = () => {
           </div>
         </div>
         <hr className="line"></hr>
-        <div className="footer">
-          <div className="footer__column">
-            <span className="footer__column__title">Mlinar</span>
+        <div className="footer-mlinar">
+          <div className="footer-mlinar__column">
+            <span className="foote-mlinarr__column__title">Mlinar</span>
             <p>Mlinar pekarska industrija d.o.o.</p>
             <p>Radnička cesta 228c</p>
             <p>10000 Zagreb, Hrvatska</p>
           </div>
-          <div className="footer__column">
-            <span className="footer__column__title">Kontakt</span>
+          <div className="footer-mlinar__column">
+            <span className="footer-mlinar__column__title">Kontakt</span>
             <p>T: +385 1 23 82 300</p>
             <p>T: +385 1 23 82 303</p>
             <p>Email: info@mlinar.eu.com</p>
           </div>
-          <div className="footer__column">
-            <div className="footer__column__tags">
+          <div className="footer-mlinar__column">
+            <div className="footer-mlinar__column__tags">
               <a href="#proizvodi">Proizvodi</a>
               <a href="#proizvodi">Lokacije</a>
               <a href="#proizvodi">Karijere</a>
               <a href="#proizvodi">Naša priča</a>
               <a href="#proizvodi">Kontakt</a>
             </div>
-            <div className="footer__column__ext">
+            <div className="footer-mlinar__column__ext">
               <img src={googleplay}></img>
               <img src={googleplay}></img>
             </div>
-            <div className="footer__column__ext">
+            <div className="footer-mlinar__column__ext">
               MLINAR pekarska industrija d.o.o. | Made by: Reroot
             </div>
           </div>
