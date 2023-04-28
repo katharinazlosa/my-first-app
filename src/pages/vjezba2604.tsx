@@ -95,7 +95,6 @@ const Vjezba2604 = () => {
         najvecaRijec = rijeci[i];
       }
     }
-    console.log(najvecaRijec);
     return najvecaRijec;
   };
 
@@ -109,7 +108,6 @@ const Vjezba2604 = () => {
         najmanjaRijec = rijeci[i];
       }
     }
-    console.log(najmanjaRijec);
     return najmanjaRijec;
   };
 
@@ -127,8 +125,10 @@ const Vjezba2604 = () => {
           <h4>Najveća riječ u nizu: </h4>
           {nađiMaxRijec()}
         </div>
-        <h4>Najmanja riječ u nizu: </h4>
-        <div>{nađiMinRijec()}</div>
+        <div>
+          <h4>Najmanja riječ u nizu: </h4>
+          {nađiMinRijec()}
+        </div>
       </div>
     </>
   );
