@@ -123,7 +123,11 @@ const Vjezba2604 = () => {
         <div>{json}</div>
         <div>{printValue("marka")}</div>
         <div>{maxBroj()}</div>
-        <div>{nađiMaxRijec()}</div>
+        <div>
+          <h4>Najveća riječ u nizu: </h4>
+          {nađiMaxRijec()}
+        </div>
+        <h4>Najmanja riječ u nizu: </h4>
         <div>{nađiMinRijec()}</div>
       </div>
     </>
