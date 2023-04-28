@@ -48,7 +48,7 @@ const Vjezba2604 = () => {
     return car[key];
   };
 
-  const recenica = `Ja imam predobar ${car.marka} ${car.model} auto koji je ${car.motor} te ima ${car.prijenos} prijenos.`;
+  const recenica = `Ja imam ${car.marka} ${car.model} auto koji je ${car.motor} te ima ${car.prijenos} prijenos.`;
   console.log(recenica);
 
   //json
@@ -58,16 +58,59 @@ const Vjezba2604 = () => {
   //zadatak
 
   const brojevi = [12, 96, 43, 56, 23, 73, 55];
-
   let max = 0;
+
   const maxBroj = () => {
     for (let i = 0; i < brojevi.length; i++) {
       if (brojevi[i] > max) {
-        // let najveci = [];
-        // console.log(najveci);
+        max = brojevi[i];
       }
     }
-    return;
+    console.log(max);
+    return max;
+  };
+
+  //ispiši najdužu i najkraću riječ iz niza
+  const rijeci = [
+    "balance",
+    "biscuit",
+    "side",
+    "grind",
+    "refund",
+    "cast",
+    "circulate",
+    "accumulation",
+    "fold",
+    "cut",
+    "entertainment",
+  ];
+
+  const nađiMaxRijec = () => {
+    let najvecaRijec = "";
+    let max = 0;
+
+    for (let i = 0; i < rijeci.length; i++) {
+      if (rijeci[i].length > max) {
+        max = rijeci[i].length;
+        najvecaRijec = rijeci[i];
+      }
+    }
+    console.log(najvecaRijec);
+    return najvecaRijec;
+  };
+
+  const nađiMinRijec = () => {
+    let najmanjaRijec = "";
+    let min = Infinity;
+
+    for (let i = 0; i < rijeci.length; i++) {
+      if (rijeci[i].length < min) {
+        min = rijeci[i].length;
+        najmanjaRijec = rijeci[i];
+      }
+    }
+    console.log(najmanjaRijec);
+    return najmanjaRijec;
   };
 
   return (
@@ -80,6 +123,8 @@ const Vjezba2604 = () => {
         <div>{json}</div>
         <div>{printValue("marka")}</div>
         <div>{maxBroj()}</div>
+        <div>{nađiMaxRijec()}</div>
+        <div>{nađiMinRijec()}</div>
       </div>
     </>
   );
