@@ -27,6 +27,10 @@
   @media (max-width: $media-s) {
     width: 100%;
   }
+  &--smaller {
+    width: 10rem;
+    background-color: red;
+  }
   //colors
   &--red {
     background-color: $red;

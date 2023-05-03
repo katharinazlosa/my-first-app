@@ -234,19 +234,26 @@ const Vjezba2804 = () => {
             <tbody>
               {frontendRazred.map((student) => {
                 let favColor = student.favoriteColor;
-                let color;
-                const showFavColor = (favColor) => {
-                  if (favColor == "red") {
-                  } else if (favColor == "green") {
-                    color = "green";
-                  } else if (favColor == "blue") {
-                    color = "blue";
-                  } else if (favColor == "black") {
-                    color = "black";
-                  } else if (favColor == "silver") {
-                    color = "silver";
-                  } else if (favColor == "grey") {
-                    color = "grey";
+                let color = "";
+                const showFavColor = (favColor: string) => {
+                  switch (color) {
+                    case "red":
+                      color = "red";
+
+                    case "green":
+                      color = "green";
+
+                    case "blue":
+                      color = "blue";
+
+                    case "black":
+                      color = "black";
+
+                    case "silver":
+                      color = "silver";
+
+                    case "grey":
+                      color = "grey";
                   }
                 };
 
