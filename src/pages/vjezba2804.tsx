@@ -51,7 +51,7 @@ const Vjezba2804 = () => {
       height: 185,
       hobby: "Football",
       employed: false,
-      favoriteColor: "Red",
+      favoriteColor: "red",
     },
     {
       name: "Nikolina",
@@ -156,27 +156,57 @@ const Vjezba2804 = () => {
         count++;
       }
     }
+
     console.log(`There are ${count} people named with letter M.`);
   };
   findMNamed();
+
   //pronađi sve osobe koje su višlje od 160, a niže od 180
-  const findTall = () => {
+  const findHeight = () => {
     let names = "";
+    // let finalNames = "";
     for (let i = 0; i < frontendRazred.length; i++) {
       let height = frontendRazred[i].height;
+      // finalNames = names.split(" ").join(" ");
       if (height > 160 && height < 180) {
-        names += frontendRazred[i].name;
+        names += frontendRazred[i].name + " ";
       }
     }
+
     console.log(`${names} are tall between 160 and 180.`);
   };
 
-  findTall();
+  findHeight();
 
   //pronađi sve osobe kojima je najdraža boja "red"
+  const findRed = () => {
+    let namesColor = " ";
+    for (let i = 0; i < frontendRazred.length; i++) {
+      let color = frontendRazred[i].favoriteColor;
+      if (color == "red") {
+        namesColor += frontendRazred[i].name + " ";
+      }
+    }
+
+    console.log(`To these people: ${namesColor} favorite color is red.`);
+  };
+
+  findRed();
+
   //pronađi sve osobe kojima prezime završava na "c" ili "ć"
-  //   const endName = frontendRazred[0].name[0].length - 1;
-  //   console.log(endName);
+  const findLastNameLetter = () => {
+    let namesLastLetter = "";
+    for (let i = 0; i < frontendRazred.length; i++) {
+      let letter = frontendRazred[i].lastName.slice(-1);
+      if (letter == "c" || letter == "ć") {
+        namesLastLetter += frontendRazred[i].name + " ";
+      }
+    }
+    console.log(
+      `${namesLastLetter} are people with last name ending in c or ć.`
+    );
+  };
+  findLastNameLetter();
 
   //2. zadatak
   //ispiši u tablicu sve članove razreda
@@ -203,11 +233,34 @@ const Vjezba2804 = () => {
             </thead>
             <tbody>
               {frontendRazred.map((student) => {
+                let favColor = student.favoriteColor;
+                let color;
+                const showFavColor = (favColor) => {
+                  if (favColor == "red") {
+                  } else if (favColor == "green") {
+                    color = "green";
+                  } else if (favColor == "blue") {
+                    color = "blue";
+                  } else if (favColor == "black") {
+                    color = "black";
+                  } else if (favColor == "silver") {
+                    color = "silver";
+                  } else if (favColor == "grey") {
+                    color = "grey";
+                  }
+                };
+
                 return (
                   <tr>
                     <td>{student.name}</td>
                     <td>{student.hobby}</td>
-                    <td>{student.favoriteColor}</td>
+                    <td
+                      style={{
+                        color: `${showFavColor(favColor)}`,
+                      }}
+                    >
+                      {favColor}
+                    </td>
                   </tr>
                 );
               })}
