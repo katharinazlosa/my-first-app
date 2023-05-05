@@ -1,12 +1,8 @@
 .header {
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
-  // padding: 2rem;
   background-color: $header-background;
 
   &__logo {
-    width: 7rem;
+    width: 10rem;
   }
 
   &__nav {
@@ -15,7 +11,7 @@
     &__item {
       text-decoration: none;
       color: $black;
-      font-size: 1.25rem;
+      font-size: 2rem;
       margin-right: 1rem;
 
       &:last-child {

@@ -114,20 +114,22 @@ const Vjezba2604 = () => {
   return (
     <>
       <div className="container">
-        <h1>Funkcije</h1>
-        <div>{bringBaka()}</div>
-        <div>{printText("Katharina")}</div>
-        <h5>JSON:</h5>
-        <div>{json}</div>
-        <div>{printValue("marka")}</div>
-        <div>{maxBroj()}</div>
-        <div>
-          <h4>Najveća riječ u nizu: </h4>
-          {nađiMaxRijec()}
-        </div>
-        <div>
-          <h4>Najmanja riječ u nizu: </h4>
-          {nađiMinRijec()}
+        <div className="var-container">
+          <h1>Funkcije</h1>
+          <hr></hr>
+          <div>Ispiši riječ baka: {bringBaka()}</div>
+          <div>Ispiši ime: {printText("Katharina")}</div>
+          <hr></hr>
+          <div> Ispiši JSON: {json}</div>
+          <div>Ispiši marku vozila: {printValue("marka")}</div>
+          <hr></hr>
+          <div>Ispiši max broj u nizu: {maxBroj()}</div>
+          <div>
+            <h4>Najduža riječ u nizu: {nađiMaxRijec()}</h4>
+          </div>
+          <div>
+            <h4>Najkraća riječ u nizu: {nađiMinRijec()}</h4>
+          </div>
         </div>
       </div>
     </>

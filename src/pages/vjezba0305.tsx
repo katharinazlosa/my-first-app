@@ -55,12 +55,16 @@ const Vjezba0305 = () => {
   };
   return (
     <>
-      <h1>Vježba 0305</h1>
-      <div className="box"></div>
-      <p>{sum(2, 2)}</p>
-      <button className="btn" onClick={() => handleClick()}>
-        Le button
-      </button>
+      <div className="container">
+        <div className="var-container">
+          <h1>Vježba 0305</h1>
+          <div className="box"></div>
+          <p>{sum(2, 2)}</p>
+          <button className="btn" onClick={() => handleClick()}>
+            Le button
+          </button>
+        </div>
+      </div>
     </>
   );
 };

@@ -1,47 +1,28 @@
+import { Link } from "react-router-dom";
 import logo from "./../assets/logo.png";
-import Hamburger from "./hamburger";
 
 const Header = () => {
   return (
     <header className="header">
       <div className="header__inner">
+        {/* <Link to="/"> */}
         <div>
           <img className="header__logo" src={logo} alt="logo"></img>
         </div>
+        {/* </Link> */}
         <div className="header__actions">
           <nav className="header__nav">
             <a className="header__nav__item" href="/">
               Home
             </a>
-            <a className="header__nav__item" href="/exe">
-              Excercises
+            <a className="header__nav__item" href="/stranice">
+              Stranice
             </a>
-            <a className="header__nav__item" href="/ispit">
-              Ispit
+            <a className="header__nav__item" href="/ispiti">
+              Ispiti
             </a>
-            <a className="header__nav__item" href="/mlinar">
-              Mlinar
-            </a>
-            <a className="header__nav__item" href="/teorem">
-              Teorem
-            </a>
-            <a className="header__nav__item" href="/fave">
-              Fave
-            </a>
-            <a className="header__nav__item" href="/varijable">
-              Varijable
-            </a>
-            <a className="header__nav__item" href="/petlje">
-              Petlje
-            </a>
-            <a className="header__nav__item" href="/vjezba2604">
-              Vjezba2604
-            </a>
-            <a className="header__nav__item" href="/vjezba2804">
-              Vjezba2804
-            </a>
-            <a className="header__nav__item" href="/vjezba0305">
-              Vjezba0305
+            <a className="header__nav__item" href="/vjezbe">
+              Vježbe
             </a>
           </nav>
         </div>

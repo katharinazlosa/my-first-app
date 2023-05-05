@@ -1,4 +1,3 @@
-import { red } from "@mui/material/colors";
 import { useState } from "react";
 
 type UserType = {
@@ -70,64 +69,67 @@ const Varijable = () => {
   // color = "asf";
   return (
     <div className="container">
-      <h1>Varijable vježba</h1>
-      <div>
-        <h4>Vrijednost pi varijable je: {pi + "5"}</h4>
-        <h4>Vrijednost color varijable je</h4>
-      </div>
-      <hr />
-      <div>
-        <h4>Vrijednost našeg statea je: {value}</h4>
-        <input className="input" type="number"></input>
-        <button onClick={() => handleValue()}>Submit</button>
-      </div>
-      <hr></hr>
-      <div>
-        <h4>Rezultat naše funkcije je: {addOnOurValue(7, 4)}</h4>
-      </div>
-      <div>
+      <div className="var-container">
+        <h1>Varijable</h1>
         <div>
-          Ime i prezime: {obj.name} {obj.lastName}
+          <p>Vrijednost pi varijable je: {pi + "5"}</p>
         </div>
-        <div>Godine: {obj.age}</div>
-        <div>Visina: {obj.height}</div>
+        <hr />
         <div>
-          Gitare: {obj.guitars.prva}, {obj.guitars.druga}, {obj.guitars.treća}
+          <h4>Vrijednost našeg statea je: {value}</h4>
+          <input className="input" type="number"></input>
+          <button onClick={() => handleValue()}>Submit</button>
         </div>
-      </div>
-      <hr></hr>
-      <div>
-        <table className="table">
-          <tr className="rows">
-            <th>Fruit</th>
-            <th>Calories</th>
-            <th>Color</th>
-            <th>Edible</th>
-          </tr>
-          <tr className="rows">
-            <td>{fruit.name}</td>
-            <td>{fruit.calories}</td>
-            <td>{fruit.color}</td>
-            <td>{fruit.edible ? "Yes" : "No"}</td>
-          </tr>
-        </table>
-      </div>
-      <hr></hr>
-      <div>
-        <table className="table">
-          <tr className="rows">
-            <th>Fruit</th>
-            <th>Calories</th>
-            <th>Color</th>
-            <th>Edible</th>
-          </tr>
-          <tr className="rows">
-            <td>{name}</td>
-            <td>{calories}</td>
-            <td>{color}</td>
-            <td>{edible ? "Yes" : "No"}</td>
-          </tr>
-        </table>
+        <hr></hr>
+        <div>
+          <h4>Rezultat naše funkcije je: {addOnOurValue(7, 4)}</h4>
+        </div>
+        <div>
+          <div>
+            Ime i prezime: {obj.name} {obj.lastName}
+          </div>
+          <div>Godine: {obj.age}</div>
+          <div>Visina: {obj.height}</div>
+          <div>
+            Gitare: {obj.guitars.prva}, {obj.guitars.druga}, {obj.guitars.treća}
+          </div>
+        </div>
+        <hr></hr>
+        <div>
+          <h2>Tablica 1</h2>
+          <table className="table">
+            <tr className="rows">
+              <th>Fruit</th>
+              <th>Calories</th>
+              <th>Color</th>
+              <th>Edible</th>
+            </tr>
+            <tr className="rows">
+              <td>{fruit.name}</td>
+              <td>{fruit.calories}</td>
+              <td>{fruit.color}</td>
+              <td>{fruit.edible ? "Yes" : "No"}</td>
+            </tr>
+          </table>
+        </div>
+        <hr></hr>
+        <div>
+          <h2>Tablica 2</h2>
+          <table className="table">
+            <tr className="rows">
+              <th>Fruit</th>
+              <th>Calories</th>
+              <th>Color</th>
+              <th>Edible</th>
+            </tr>
+            <tr className="rows">
+              <td>{name}</td>
+              <td>{calories}</td>
+              <td>{color}</td>
+              <td>{edible ? "Yes" : "No"}</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   );

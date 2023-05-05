@@ -85,11 +85,13 @@ const Petlje = () => {
 
   return (
     <div className="container">
-      <h1>Petlje</h1>
-      <hr />
-      <div>
-        <input className="input" type="number" />
-        <button onClick={() => handleValue()}>Submit</button>
+      <div className="var-container">
+        <h1>Petlje</h1>
+        <hr />
+        <div>
+          <input className="input" type="number" />
+          <button onClick={() => handleValue()}>Submit</button>
+        </div>
       </div>
     </div>
   );
