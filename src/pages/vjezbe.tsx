@@ -26,6 +26,9 @@ const Vjezbe = () => {
           <a className="main-page-links" href="/vjezba0305">
             Vježba 0305
           </a>
+          <a className="main-page-links" href="/breweries">
+            Breweries
+          </a>
         </div>
       </div>
     </>

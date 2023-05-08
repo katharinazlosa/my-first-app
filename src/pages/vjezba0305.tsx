@@ -45,6 +45,31 @@ const Vjezba0305 = () => {
     return twoNumSum;
   };
   //5. animirati box dijagonalno do (30px, 30px) i nazad do 50px
+  let position = 0;
+  let reverse = false;
+
+  useEffect(() => {
+    const box = document.getElementsByClassName("box")[0] as HTMLDivElement;
+
+    const frame = () => {
+      if (reverse) {
+        position--;
+      } else {
+        position++;
+      }
+      const currentPosition = position + "px";
+
+      if (position == 30) {
+        reverse = true;
+      }
+      if (position == 0) {
+        reverse = false;
+      }
+
+      box.style.marginLeft = currentPosition;
+    };
+    setInterval(frame, 30);
+  }, []);
 
   //6. smanjiti button
 

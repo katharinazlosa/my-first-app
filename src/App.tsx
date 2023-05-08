@@ -15,6 +15,7 @@ import Vjezba0305 from "./pages/vjezba0305";
 import Vjezbe from "./pages/vjezbe";
 import Stranice from "./pages/stranice";
 import Ispiti from "./pages/ispiti";
+import Breweries from "./pages/breweries";
 
 function App() {
   const router = createBrowserRouter([
@@ -73,6 +74,10 @@ function App() {
     {
       path: "/ispiti",
       element: <Ispiti />,
+    },
+    {
+      path: "/breweries",
+      element: <Breweries />,
     },
   ]);
 
