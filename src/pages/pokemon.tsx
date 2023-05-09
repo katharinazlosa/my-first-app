@@ -83,7 +83,7 @@ const Pokemon = () => {
   const [flag, setFlag] = useState<string>("");
 
   const getCapitalCity = () => {
-    fetch(`https://restcountries.com/v3.1/capital/tallinn`)
+    fetch(`https://restcountries.com/v3.1/capital/zagreb`)
       .then((res) => {
         return res.json();
       })
