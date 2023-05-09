@@ -16,6 +16,7 @@ import Vjezbe from "./pages/vjezbe";
 import Stranice from "./pages/stranice";
 import Ispiti from "./pages/ispiti";
 import Breweries from "./pages/breweries";
+import Pokemon from "./pages/pokemon";
 
 function App() {
   const router = createBrowserRouter([
@@ -78,6 +79,10 @@ function App() {
     {
       path: "/breweries",
       element: <Breweries />,
+    },
+    {
+      path: "/pokemon",
+      element: <Pokemon />,
     },
   ]);
 

@@ -94,7 +94,7 @@ const Breweries = () => {
           {dataByCity.map((breweryCity: BreweryType) => {
             return <div key={breweryCity.id}>{breweryCity.name}</div>;
           })}
-          {!loading ? (
+          {/* {!loading ? (
             <Pagination
               {...paginationAttributes}
               onPrevClick={onPrevClick}
@@ -103,7 +103,7 @@ const Breweries = () => {
             />
           ) : (
             <div> Loading... </div>
-          )}
+          )} */}
         </div>
       </div>
     </>

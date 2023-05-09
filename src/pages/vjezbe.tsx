@@ -29,6 +29,9 @@ const Vjezbe = () => {
           <a className="main-page-links" href="/breweries">
             Breweries
           </a>
+          <a className="main-page-links" href="/pokemon">
+            Pokemon
+          </a>
         </div>
       </div>
     </>
