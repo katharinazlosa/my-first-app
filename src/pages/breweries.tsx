@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
-import ReactPaginate from "react-paginate";
+import Pagination from "../components/paginationAPI";
 
 type BreweryType = {
   name: string;
@@ -9,18 +8,26 @@ type BreweryType = {
   country: string;
 };
 
-//NAPRAVITI PAGINACIJU I SEARCH!!!
-
 const Breweries = () => {
   const [data, setData] = useState<BreweryType[]>([]);
+
   const [dataByCity, setDataByCity] = useState<BreweryType[]>([]);
 
+  const pageNumberLimit = 5;
+  const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [maxPageLimit, setMaxPageLimit] = useState(5);
+  const [minPageLimit, setMinPageLimit] = useState(0);
+
+  //getting data with await
   async function getBreweries() {
     const response = await fetch("https://api.openbrewerydb.org/v1/breweries");
     const jsonData = await response.json();
     console.log(jsonData);
     setData(jsonData);
   }
+
+  //getting data and catching err (more modern way)
   const getBreweryByCity = (city: string, perPage: number, page: number) => {
     fetch(
       `https://api.openbrewerydb.org/v1/breweries?by_city=${city}&page=${page}&per_page=${perPage}`
@@ -30,6 +37,7 @@ const Breweries = () => {
       })
       .then((jsonData) => {
         setDataByCity(jsonData);
+        setLoading(false);
       })
       .catch((error) => console.error(error));
   };
@@ -41,42 +49,32 @@ const Breweries = () => {
   }, []);
 
   //PAGINATION
-  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
-  function Items({ currentItems }) {
-    return (
-      <>
-        {currentItems &&
-          currentItems.map((item) => (
-            <div>
-              <h3>Item #{item}</h3>
-            </div>
-          ))}
-      </>
-    );
-  }
+  const onPageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
+  const onPrevClick = () => {
+    if ((currentPage - 1) % pageNumberLimit === 0) {
+      setMaxPageLimit(maxPageLimit - pageNumberLimit);
+      setMinPageLimit(minPageLimit - pageNumberLimit);
+    }
+    setCurrentPage((prev) => prev - 1);
+  };
 
-  function PaginatedItems({ itemsPerPage }) {
-    // Here we use item offsets; we could also use page offsets
-    // following the API or data you're working with.
-    const [itemOffset, setItemOffset] = useState(0);
-  
-    // Simulate fetching items from another resources.
-    // (This could be items from props; or items loaded in a local state
-    // from an API endpoint with useEffect and useState)
-    const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-    const currentItems = items.slice(itemOffset, endOffset);
-    const pageCount = Math.ceil(items.length / itemsPerPage);
-  
-    // Invoke when user click to request another page.
-    const handlePageClick = (event) => {
-      const newOffset = (event.selected * itemsPerPage) % items.length;
-      console.log(
-        `User requested page number ${event.selected}, which is offset ${newOffset}`
-      );
-      setItemOffset(newOffset);
-    };
+  const onNextClick = () => {
+    if (currentPage + 1 > maxPageLimit) {
+      setMaxPageLimit(maxPageLimit + pageNumberLimit);
+      setMinPageLimit(minPageLimit + pageNumberLimit);
+    }
+    setCurrentPage((prev) => prev + 1);
+  };
+
+  const paginationAttributes = {
+    currentPage,
+    maxPageLimit,
+    minPageLimit,
+    response: dataByCity,
+  };
 
   return (
     <>
@@ -96,18 +94,16 @@ const Breweries = () => {
           {dataByCity.map((breweryCity: BreweryType) => {
             return <div key={breweryCity.id}>{breweryCity.name}</div>;
           })}
-        </div>
-        <div>
-          <Items currentItems={currentItems} />
-            <ReactPaginate
-              breakLabel="..."
-              nextLabel="next >"
-              onPageChange={handlePageClick}
-              pageRangeDisplayed={5}
-              pageCount={pageCount}
-              previousLabel="< previous"
-              renderOnZeroPageCount={null}
+          {!loading ? (
+            <Pagination
+              {...paginationAttributes}
+              onPrevClick={onPrevClick}
+              onNextClick={onNextClick}
+              onPageChange={onPageChange}
             />
+          ) : (
+            <div> Loading... </div>
+          )}
         </div>
       </div>
     </>
@@ -115,10 +111,3 @@ const Breweries = () => {
 };
 
 export default Breweries;
-// function getBreweries() {
-//   throw new Error("Function not implemented.");
-// }
-
-// function getBreweryByCity() {
-//   throw new Error("Function not implemented.");
-// }
