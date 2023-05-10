@@ -44,7 +44,7 @@
 //   if (minPageLimit >= 1) {
 //     pageDecremenEllipses = <li onClick={handlePrevClick}>&hellip;</li>;
 //   }
-//   const renderData = (data) => {
+//   const renderData = (data: any) => {
 //     return (
 //       <ul>
 //         {data.map((d) => (

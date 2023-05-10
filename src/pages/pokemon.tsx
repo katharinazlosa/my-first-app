@@ -13,7 +13,13 @@ type PokemonTypesType = {
 type PokemonType = {
   id: number;
   name: string;
-  types: PokemonTypesType;
+  types: PokemonTypesType[];
+};
+
+type PokemonAbility = {
+  id: number;
+  name: string;
+  names: PokemonAbilityNames[];
 };
 
 type BerryType = {
@@ -27,106 +33,92 @@ type CityType = {
 
 const Pokemon = () => {
   const [data, setData] = useState<PokemonType>();
-  //   const [pokemonColor, setPokemonColor] = useState();
-  //   const [searchValue, setSearchValue] = useState();
-
-  //   const [isLoaded, setIsLoaded] = useState(false);
-  //   const [error, setError] = useState(null);
-
-  //   //search query set to empty string
-  //   const [pokemonName, setPokemonName] = useState("");
-
-  //   //search parameters
-
-  //   const getPokemons = (pokemonName: string) => {
-  //     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-  //       .then((response) => {
-  //         return response.json();
-  //       })
-  //       .then((jsonData) => {
-  //         setData(jsonData);
-  //         setIsLoaded(true);
-  //       })
-  //       .catch((error) => setIsLoaded(true));
-  //     setError(error);
-  //   };
-
-  //   useEffect(() => {
-  //     getPokemons();
-  //   }, []);
-
-  //   const getPokemonColor = (id: number) => {
-  //     fetch(`https://pokeapi.co/api/v2/pokemon-color/${id}/`)
-  //       .then((response) => {
-  //         return response.json();
-  //       })
-  //       .then((jsonData) => {
-  //         setPokemonColor(jsonData);
-  //       })
-  //       .catch((error) => console.error(error));
-  //   };
-
-  //   const [berries, setBerries] = useState<BerryType[]>([]);
-
-  //   const getBerries = () => {
-  //     fetch(`https://pokeapi.co/api/v2/berry`)
-  //       .then((response) => {
-  //         return response.json();
-  //       })
-  //       .then((jsonData) => {
-  //         console.log(jsonData.results);
-  //         setBerries(jsonData.results);
-  //       })
-  //       .catch((error) => console.log(error));
-  //   };
-
+  const [pokemonData, setPokemonData] = useState<PokemonType>();
+  const [pokemonAbility, setPokemonAbility] = useState<PokemonAbility>();
+  const [searchValue, setSearchValue] = useState<string>("");
+  const [berries, setBerries] = useState<BerryType[]>([]);
   const [flag, setFlag] = useState<string>("");
 
-  const getCapitalCity = () => {
-    fetch(`https://restcountries.com/v3.1/capital/zagreb`)
+  //
+
+  const getPokemonAbility = (id: number) => {
+    fetch(`https://pokeapi.co/api/v2/ability/${id}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setPokemonAbility(data);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  const searchPokemon = (pokemonName: string) => {
+    fetch(
+      `https://pokeapi.co/api/v2/pokemon/${pokemonName.toLocaleLowerCase()}`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setPokemonData(data);
+        getPokemonAbility(data.id);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const getBerries = () => {
+    fetch("https://pokeapi.co/api/v2/berry")
       .then((res) => {
         return res.json();
       })
-      .then((jsonData) => {
-        console.log(jsonData[0].flags.png);
-        setFlag(jsonData[0].flags.png);
+      .then((data) => {
+        //console.log(data.results);
+        setBerries(data.results);
       })
-      .catch((error) => console.log(error));
+      .catch((err) => console.log(err));
+  };
+
+  const getCapitalCity = () => {
+    fetch("https://restcountries.com/v3.1/capital/zagreb")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data[0].flags.png);
+        setFlag(data[0].flags.png);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   useEffect(() => {
-    // getBerries();
+    getBerries();
     getCapitalCity();
   }, []);
+
   return (
     <>
       <div className="input-container">
-        <form action="/action_page.php">
-          <label for="pokemonsearch">Search Pokemons to get its color:</label>
-          <input
-            type="search"
-            id="pokemonsearch"
-            name="pokemonsearch"
-            // value={pokemonName}
-            // onChange={(e) => setSearchValue(e.target.value)}
-          ></input>
-          {/* <button onClick={() => getPokemonColor(name)}>Get color</button> */}
-        </form>
+        <label for="pokemonsearch">Search Pokemons to get its color:</label>
+        <input
+          type="search"
+          id="pokemonsearch"
+          name="pokemonsearch"
+          onChange={(e) => setSearchValue(e.target.value)}
+        ></input>
+        <button
+          className="pokemons__btn"
+          onClick={() => searchPokemon(searchValue)}
+        >
+          Get color
+        </button>
       </div>
 
-      <div>
-        {/* {searchParam.length > 0 ? (
-          searchParam.map((pokemon: string) => {
-            return <div>{pokemon.name}</div>;
-          })
-        ) : (
-          <div>Couldn't find pokemon color you're looking for.</div>
-        )} */}
-      </div>
-      <div>
-        {/* {[data].map((pokemon) => {
-          return <div>{pokemon.name}</div>;
-        })} */}
+      <div className="pokemons__color-box">
+        {pokemonAbility &&
+          pokemonAbility.names.map((name) => {
+            return <div>{name.name}</div>;
+          })}
       </div>
       {/* <div>
         {berries.map((berry) => {
