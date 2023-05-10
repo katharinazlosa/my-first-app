@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau:wght@200&display=swap");
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ysabeau", sans-serif;
+
+  .table {
+    border-collapse: collapse;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 3rem;
+
+    &__content {
+      border: 1px solid $grey;
+      padding: 1.5rem;
+      img {
+        width: 6vw;
+      }
+    }
+  }
+}

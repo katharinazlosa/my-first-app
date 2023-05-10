@@ -17,6 +17,8 @@ import Stranice from "./pages/stranice";
 import Ispiti from "./pages/ispiti";
 import Breweries from "./pages/breweries";
 import Pokemon from "./pages/pokemon";
+import Europe from "./pages/europe";
+import EuropeCountry from "./pages/europeCountry";
 
 function App() {
   const router = createBrowserRouter([
@@ -83,6 +85,14 @@ function App() {
     {
       path: "/pokemon",
       element: <Pokemon />,
+    },
+    {
+      path: "/europe",
+      element: <Europe />,
+    },
+    {
+      path: "/europe/:capitalId",
+      element: <EuropeCountry />,
     },
   ]);
 
