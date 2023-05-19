@@ -15,7 +15,7 @@ const Ispiti = () => {
             />
             Ispit CSS
           </a>
-          <a className="main-page-links" href="/">
+          <a className="main-page-links" href="/ispitJS">
             <img
               className="main-page-icons"
               src="https://img.icons8.com/wired/64/null/javascript.png"
