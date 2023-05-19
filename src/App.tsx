@@ -19,6 +19,9 @@ import Breweries from "./pages/breweries";
 import Pokemon from "./pages/pokemon";
 import Europe from "./pages/europe";
 import EuropeCountry from "./pages/europeCountry";
+import Vjezba1505 from "./pages/vjezba1505";
+import Todo from "./pages/todo";
+import Chat from "./pages/chat";
 
 function App() {
   const router = createBrowserRouter([
@@ -93,6 +96,18 @@ function App() {
     {
       path: "/europe/:capitalId",
       element: <EuropeCountry />,
+    },
+    {
+      path: "/vjezba1505",
+      element: <Vjezba1505 />,
+    },
+    {
+      path: "/todo",
+      element: <Todo />,
+    },
+    {
+      path: "/chat",
+      element: <Chat />,
     },
   ]);
 

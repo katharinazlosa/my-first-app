@@ -35,6 +35,15 @@ const Vjezbe = () => {
           <a className="main-page-links" href="/europe">
             Europe
           </a>
+          <a className="main-page-links" href="/vjezba1505">
+            Vjezba1505
+          </a>
+          <a className="main-page-links" href="/todo">
+            Todo
+          </a>
+          <a className="main-page-links" href="/chat">
+            Chat
+          </a>
         </div>
       </div>
     </>
