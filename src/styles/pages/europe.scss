@@ -7,6 +7,7 @@ h3 {
 
 .table-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Ysabeau", sans-serif;
