@@ -11,7 +11,7 @@ const Card = ({ title, text, src }: CardProps) => {
     <>
       <div className="card-box">
         <img className="card-box__img lalal" src={src}></img>
-        <h2 className="card-box__title">{title}</h2>
+        <h2 className="card-box__title hihi">{title}</h2>
         <p className="card-box__text">{text}</p>
         <div className="card-box__btn">
           <Button animate={false} value={"OK"} color="green" />
