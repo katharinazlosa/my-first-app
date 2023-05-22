@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Sound from "react-sound";
 
 type DataType = {
   trackName: string;
@@ -70,7 +69,7 @@ const IspitJS = () => {
                       <div>
                         <h2>{result.trackName}</h2>
                         <h1>{result.artistName}</h1>
-                        <audio controls autoplay>
+                        <audio controls>
                           <source
                             src={result.previewUrl}
                             type="audio/ogg"
