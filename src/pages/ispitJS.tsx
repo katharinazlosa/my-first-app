@@ -40,6 +40,8 @@ const IspitJS = () => {
       .catch((err) => console.log(err));
   };
 
+  const nekaVar = 0;
+
   return (
     <>
       <div className="container">
