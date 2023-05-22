@@ -22,7 +22,7 @@ const Header = () => {
               Exams
             </a>
             <a className="header__nav__item" href="/vjezbe">
-              Vježbe
+              Exercises
             </a>
           </nav>
         </div>
