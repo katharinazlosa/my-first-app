@@ -16,10 +16,10 @@ const Header = () => {
               Home
             </a>
             <a className="header__nav__item" href="/stranice">
-              Stranice
+              Pages
             </a>
             <a className="header__nav__item" href="/ispiti">
-              Ispiti
+              Exams
             </a>
             <a className="header__nav__item" href="/vjezbe">
               Vježbe
