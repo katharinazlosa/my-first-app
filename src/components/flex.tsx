@@ -31,7 +31,7 @@ const Flex = () => {
             className="img"
             src="https://img.icons8.com/ios/40/null/xbox-x.png"
           />
-          <span>text</span>
+          <span>textić</span>
         </div>
       </div>
     </>
