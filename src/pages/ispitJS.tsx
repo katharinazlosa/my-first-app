@@ -77,27 +77,6 @@ const IspitJS = () => {
                         </audio>
                       </div>
                     </div>
-
-                    // <tr className="table__content" key={result.trackId}>
-                    //   <td className="table__content">
-                    //     {result.artistName}
-                    //   </td>
-                    //   <td className="table__content">{result.trackName}</td>
-                    //   <td className="table__content">
-                    //     {result.collectionName}
-                    //   </td>
-                    //   <td className="table__content">
-                    //     <img src={result.artworkUrl100}></img>
-                    //   </td>
-                    //   <td className="table__content">
-                    //     <audio controls autoplay>
-                    //       <source
-                    //         src={result.previewUrl}
-                    //         type="audio/ogg"
-                    //       ></source>
-                    //     </audio>
-                    //   </td>
-                    // </tr>
                   );
                 })
               ) : (

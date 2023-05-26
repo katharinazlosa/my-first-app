@@ -23,6 +23,7 @@ import Vjezba1505 from "./pages/vjezba1505";
 import Todo from "./pages/todo";
 import Chat from "./pages/chat";
 import IspitJS from "./pages/ispitJS";
+import BooksClub from "./pages/booksclub";
 
 function App() {
   const router = createBrowserRouter([
@@ -113,6 +114,10 @@ function App() {
     {
       path: "/ispitJS",
       element: <IspitJS />,
+    },
+    {
+      path: "/booksclub",
+      element: <BooksClub />,
     },
   ]);
 

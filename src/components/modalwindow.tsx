@@ -1,6 +1,12 @@
 import { useState } from "react";
 
-const ModalWindow = () => {
+type ModalType = {
+  title: string;
+  paragraph: string;
+  btnInfo: string;
+};
+
+const ModalWindow = ({ title, paragraph, btnInfo }: ModalType) => {
   const [modal, setModal] = useState<boolean>(false);
 
   const toggleModal = () => {
@@ -19,18 +25,8 @@ const ModalWindow = () => {
               </button>
             </div>
             <div className="modal__section">
-              <h2>
-                Molim vas, ostavite e-mail adresu i kontaktirat ću vas u
-                najkraćem mogućem roku.
-              </h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Tristique et egestas quis ipsum. Et sollicitudin ac orci
-                phasellus. Mattis enim ut tellus elementum. Enim nec dui nunc
-                mattis enim ut tellus elementum sagittis. Faucibus pulvinar
-                elementum integer enim neque volutpat ac tincidunt vitae.
-              </p>
+              <h2>{title}</h2>
+              <p>{paragraph}</p>
             </div>
             <div className="modal__footer">
               <input type="email" id="email" placeholder="email@js.com" />
@@ -43,7 +39,7 @@ const ModalWindow = () => {
       )}
 
       <button onClick={toggleModal} className="btn">
-        Show Modal
+        {btnInfo}
       </button>
     </>
   );
