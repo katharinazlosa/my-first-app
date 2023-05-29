@@ -31,7 +31,7 @@ const ModalWindow = ({ title, paragraph, btnInfo }: ModalType) => {
             <div className="modal__footer">
               <input type="email" id="email" placeholder="email@js.com" />
               <button className="btn">Submit</button>
-            </div>
+            </div> 
           </div>
         </>
       ) : (
