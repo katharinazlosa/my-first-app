@@ -36,6 +36,7 @@ const Teorem = () => {
         />
         <Grid3 />
         <StretchCard />
+        <br></br>
         <Section
           title="Set your own price and availability!"
           content="See our tools to track how much you’re making and increase

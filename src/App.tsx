@@ -5,6 +5,7 @@ import Home from "./pages/home";
 import Ispit from "./pages/ispit";
 import Mlinar from "./pages/mlinar";
 import "./styles/styles.scss";
+
 import Teorem from "./pages/teorem";
 import Fave from "./pages/fave";
 import Varijable from "./pages/varijable";
