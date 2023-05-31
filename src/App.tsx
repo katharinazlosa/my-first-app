@@ -25,6 +25,7 @@ import Todo from "./pages/todo";
 import Chat from "./pages/chat";
 import IspitJS from "./pages/ispitJS";
 import BooksClub from "./pages/booksclub";
+import Bootstrap from "./pages/bootstrap";
 
 function App() {
   const router = createBrowserRouter([
@@ -119,6 +120,10 @@ function App() {
     {
       path: "/booksclub",
       element: <BooksClub />,
+    },
+    {
+      path: "/bootstrap",
+      element: <Bootstrap />,
     },
   ]);
 

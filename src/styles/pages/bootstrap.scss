@@ -1,0 +1,20 @@
+.alert-container {
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  height: 20rem;
+  .text-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+}
+.game-img {
+  width: 8rem;
+  margin-bottom: -5rem;
+}
+.grass-img {
+  width: 100vw;
+  height: 10vh;
+}

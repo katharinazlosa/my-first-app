@@ -34,6 +34,7 @@
 
 //pages
 @import "./pages/booksclub.scss";
+@import "./pages/bootstrap.scss";
 @import "./pages/europe.scss";
 @import "./pages/fave.scss";
 @import "./pages/home.scss";
@@ -42,3 +43,6 @@
 @import "./pages/mlinar.scss";
 @import "./pages/teorem.scss";
 @import "./pages/vjezbe.scss";
+
+//bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";

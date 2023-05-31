@@ -1,4 +1,3 @@
-import vector from "./../assets/vector.png";
 import Accordion from "react-bootstrap/Accordion";
 import "bootstrap/dist/css/bootstrap.min.css";
 

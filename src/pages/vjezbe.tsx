@@ -41,9 +41,9 @@ const Vjezbe = () => {
           <a className="main-page-links" href="/todo">
             Todo
           </a>
-          {/* <a className="main-page-links" href="/chat">
-            Chat
-          </a> */}
+          <a className="main-page-links" href="/bootstrap">
+            Bootstrap
+          </a>
         </div>
       </div>
     </>
