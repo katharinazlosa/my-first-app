@@ -10,11 +10,24 @@
     padding: 1.5rem;
   }
 }
-.game-img {
-  width: 8rem;
-  margin-bottom: -5rem;
-}
-.grass-img {
-  width: 100vw;
-  height: 10vh;
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+  // height: 30rem;
+  justify-content: space-between;
+  .players {
+    position: relative;
+    height: 19rem;
+  }
+  .game-img {
+    width: 8rem;
+    bottom: 4rem;
+    position: absolute;
+    left: 0;
+  }
+  .grass-img {
+    width: 100vw;
+    height: 25vh;
+  }
 }

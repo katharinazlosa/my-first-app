@@ -10,20 +10,8 @@ import {
   Tabs,
 } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
-
-import kenny from "./../assets/kenny.png";
-import strongwoman from "./../assets/strongwoman.png";
-import grass from "./../assets/grass.png";
+import { LineChart, Line } from "recharts";
+import BootstrapGame from "./bootstrap-game";
 
 type StudentType = {
   name: string;
@@ -276,19 +264,10 @@ const Bootstrap = () => {
             </div>
           </Tab>
           <Tab eventKey="game" title="Game">
-            <div className="player-container">
-              <img src={strongwoman} className="game-img strongwoman"></img>
-              <img src={grass} className="grass-img"></img>
-            </div>
-            <div className="player-container">
-              <img src={kenny} className="game-img kenny"></img>
-              <img src={grass} className="grass-img"></img>
-            </div>
+            <BootstrapGame />
           </Tab>
         </Tabs>
       </div>
-
-      {/* tabovi onda - 1. dashboard - jedna kartica - pola ekrana široka (broj napisan i progress bar 45%) 2. kartica graf(chart.js) pola ekrana široka */}
     </>
   );
 };
