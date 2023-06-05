@@ -38,6 +38,14 @@ const Stranice = () => {
             </a>
           </div>
         </div>
+        <div className="main-links-container">
+          <img src={favelink} className="image"></img>
+          <div className="middle-box">
+            <a className="main-page-links" href="/instagram">
+              Instagram
+            </a>
+          </div>
+        </div>
       </div>
     </>
   );

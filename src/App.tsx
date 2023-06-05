@@ -26,6 +26,7 @@ import Chat from "./pages/chat";
 import IspitJS from "./pages/ispitJS";
 import BooksClub from "./pages/booksclub";
 import Bootstrap from "./pages/bootstrap";
+import Instagram from "./pages/instagram/instagram";
 
 function App() {
   const router = createBrowserRouter([
@@ -124,6 +125,10 @@ function App() {
     {
       path: "/bootstrap",
       element: <Bootstrap />,
+    },
+    {
+      path: "/instagram",
+      element: <Instagram />,
     },
   ]);
 

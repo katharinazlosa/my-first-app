@@ -1,17 +1,17 @@
 import { useState } from "react";
-import {
-  Accordion,
-  Alert,
-  Col,
-  ProgressBar,
-  Row,
-  Tab,
-  Table,
-  Tabs,
-} from "react-bootstrap";
-import Card from "react-bootstrap/Card";
+// import {
+//   Accordion,
+//   Alert,
+//   Col,
+//   ProgressBar,
+//   Row,
+//   Tab,
+//   Table,
+//   Tabs,
+// } from "react-bootstrap";
+// import Card from "react-bootstrap/Card";
 import { LineChart, Line } from "recharts";
-import BootstrapGame from "./bootstrap-game";
+// import BootstrapGame from "./bootstrap-game";
 
 type StudentType = {
   name: string;
@@ -153,7 +153,7 @@ const Bootstrap = () => {
     <>
       <h1>Bootstrap</h1>
       <h4>Accordion</h4>
-      <Accordion defaultActiveKey="0">
+      {/* <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header>Accordion Item #1</Accordion.Header>
           <Accordion.Body>
@@ -266,8 +266,8 @@ const Bootstrap = () => {
           <Tab eventKey="game" title="Game">
             <BootstrapGame />
           </Tab>
-        </Tabs>
-      </div>
+        </Tabs> */}
+      {/* </div> */}
     </>
   );
 };

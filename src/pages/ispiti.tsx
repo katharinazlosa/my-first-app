@@ -22,6 +22,15 @@ const Ispiti = () => {
             />
             Ispit JS
           </a>
+          <a className="main-page-links" href="/ispitreact">
+            <img
+              width="50"
+              height="50"
+              src="https://img.icons8.com/dotty/80/react.png"
+              alt="react"
+            />
+            Ispit React
+          </a>
         </div>
       </div>
     </>

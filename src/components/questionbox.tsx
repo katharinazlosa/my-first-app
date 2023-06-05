@@ -1,5 +1,5 @@
-import Accordion from "react-bootstrap/Accordion";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import Accordion from "react-bootstrap/Accordion";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 type questionBoxDataType = {
   question: string;

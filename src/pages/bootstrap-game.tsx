@@ -3,7 +3,7 @@ import strongwoman from "./../assets/strongwoman.png";
 import grass from "./../assets/grass.png";
 
 import { useState } from "react";
-import { Button } from "react-bootstrap";
+
 import ModalWindow from "../components/modalwindow";
 
 type NamesType = {
