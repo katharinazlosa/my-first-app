@@ -6,6 +6,7 @@ const Instagram = () => {
   const [posts, setPosts] = useState<PostType[]>([]);
   const [inputText, setInputText] = useState("");
   const [modal, setModal] = useState<boolean>();
+  const [remove, setRemove] = useState<boolean>();
 
   const newPostObj: PostType = {
     id: "2",
@@ -64,6 +65,10 @@ const Instagram = () => {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputText(e.target.value);
+  };
+
+  const removeImg = () => {
+    setRemove(true);
   };
   return (
     <div>
@@ -148,9 +153,14 @@ const Instagram = () => {
                   <h4 className="picture-container__header__title">
                     {post.title}
                   </h4>
-                  <h4 className="picture-container__header__title">
-                    {post.description}
-                  </h4>
+                  <img
+                    className="picture-container__header__bin-img"
+                    width="50"
+                    height="50"
+                    src="https://img.icons8.com/ios/50/delete--v1.png"
+                    alt="delete--v1"
+                    onClick={() => setRemove(true)}
+                  />
                 </div>
                 <div className="picture-container__article">
                   <img src={post.img_url}></img>

@@ -17,9 +17,7 @@
     -webkit-background-clip: text;
   }
 }
-// .close {
-//   background-color: black;
-// }
+
 .modal-container {
   display: flex;
   justify-content: center;
@@ -30,9 +28,6 @@
     padding: 3rem;
     width: 75vw;
     height: 60vh;
-    // &__closed {
-    //
-    // }
     .input-header {
       display: flex;
       flex-direction: row;
@@ -102,7 +97,8 @@
   }
 
   .picture-container {
-    width: 50rem;
+    width: 40rem;
+    height: 55rem;
     background-color: $white;
     text-align: center;
     border-radius: 0.5rem;
@@ -111,6 +107,8 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
+
       padding: 2rem;
       &__img {
         object-fit: cover;
@@ -118,9 +116,16 @@
         width: 4rem;
         height: 4rem;
       }
-      &__title {
-        display: flex;
-        align-items: center;
+      &__bin-img {
+        height: 2rem;
+        width: 2rem;
+        cursor: pointer;
+      }
+    }
+    &__article {
+      img {
+        width: 35rem;
+        height: 40rem;
       }
     }
     &__footer {
