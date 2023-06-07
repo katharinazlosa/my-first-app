@@ -1,60 +1,59 @@
-// import { ChangeEvent, useState } from "react";
-// import createPost from "./instagram";
+// const [modal, setModal] = useState<boolean>();
 
 // const InstagramModal = () => {
-//   const [inputText, setInputText] = useState("");
-//   const [modal, setModal] = useState<boolean>();
-
-//   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-//     setInputText(e.target.value);
-//   };
 //   return (
 //     <>
-//       {modal ? (
-//         <div className="modal-instagram" onClick={setModal(false)}>
-//           <h4>Dodaj novi post</h4>
-//           <form id="form" method="post">
-//             <input
-//               type="text"
-//               id="name"
-//               placeholder="title"
-//               value={inputText}
-//               onChange={handleChange}
-//             ></input>
-//             <br></br>
-//             <input
-//               type="text"
-//               id="desc"
-//               placeholder="description"
-//               value={inputText}
-//               onChange={handleChange}
-//             ></input>
-//             <br></br>
-//             <input
-//               type="text"
-//               id="hashtags"
-//               placeholder="hashtags"
-//               value={inputText}
-//               onChange={handleChange}
-//             ></input>
-//             <br></br>
-//             <input
-//               type="text"
-//               id="url"
-//               placeholder="img url"
-//               value={inputText}
-//               onChange={handleChange}
-//             ></input>
-//             <br></br>
-//           </form>
-//           <button onClick={createPosts()}></button>
-//           <div>
-//             <h3>The data is successfully posted.</h3>
-//           </div>
-//         </div>
-//       ) : (
-//         <></>
-//       )}
+//       <div className="modal-container close" onClick={() => setModal(false)}>
+//         {modal ? (
+//           <>
+//             <div className="modal-instagram">
+//               <div className="input-header">
+//                 <h4>Creating new post...</h4>
+//                 <button className="modal-close" onClick={() => setModal(false)}>
+//                   X
+//                 </button>
+//               </div>
+//               <div className="input-field">
+//                 <label htmlFor="title">Title:</label>
+//                 <input
+//                   type="text"
+//                   id="name"
+//                   placeholder="title"
+//                   // value={inputText}
+//                   // onChange={handleChange}
+//                 ></input>
+//               </div>
+//               <div className="input-field">
+//                 <label htmlFor="title">Description:</label>
+//                 <input
+//                   type="text"
+//                   id="desc"
+//                   placeholder="description"
+//                   // value={inputText}
+//                   // onChange={handleChange}
+//                 ></input>
+//               </div>
+
+//               <div className="input-field">
+//                 <label htmlFor="title">Image url:</label>
+//                 <input
+//                   type="text"
+//                   id="url"
+//                   placeholder="img url"
+//                   // value={inputText}
+//                   // onChange={handleChange}
+//                 ></input>
+//               </div>
+//               <button className="create-post__btn">
+//                 {/* onClick={() => handlePost()} */}
+//                 Post
+//               </button>
+//             </div>
+//           </>
+//         ) : (
+//           <></>
+//         )}
+//       </div>
 //     </>
 //   );
 // };
